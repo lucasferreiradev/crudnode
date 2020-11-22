@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD NODEJS / EXPRESS / MOGODB</title>
+</head>
+<body>
+
+<h2>Edit Register</h2>
+  <% data.forEach(function(details) { %>
+    <form action="/edit/<%= details._id %>" method="POST">
+      <input type="text" value="<%= details.name %>" name="name">
+      <input type="text" value="<%= details.surname %>" name="surname">
+      <input type="text" value="<%= details.course %>" name="course">
+      <input type="text" value="<%= details.studentid %>" name="studentid">
+      <br />
+      <button><a href="/show">Return</a></button>
+      <button type="submit">Submit</button>
+    </form>
+  <% }) %>
+
+</body>
+</html>
